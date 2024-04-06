@@ -1,0 +1,28 @@
+<%- include ('partials/header')%>
+
+<body>
+    <%- include ('partials/navbar')%>
+    
+    <div class="container">
+        <div class="card" id="formulario-pergunta">
+            <div class="card-header">
+                <h1> Bem vindo ao ForumJs</h1>
+                <p> Aqui você pode tirar suas dúvidas e ajudar outras pessoas com suas dúvidas</p>    
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/perguntas">
+                    <label for=""> Título</label>
+                    <input type="text" placeholder="Título da pergunta" class="form-control" name="titulo">
+                    <br>
+                    <label for=""> Pergunta</label>
+                    <textarea placeholder="Descreva sua Pergunta" class="form-control" name="descricao"> </textarea>
+                    <br>
+        
+                    <button class="btn btn-primary"> Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<%- include ('partials/footer')%>

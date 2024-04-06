@@ -1,0 +1,32 @@
+<%- include ('partials/header')%>
+<body>
+    <%- include ('partials/navbar')%>
+    
+    <div class="container" id="home-conteudo">
+        <h1> Bem vindo ao ForumJs</h1>
+        <p> Aqui você pode tirar suas dúvidas e ajudar outras pessoas com suas dúvidas</p>
+        <hr>
+       
+        <a href="/pergunta-form" class="btn btn-primary"> Criar Pergunta</a>
+        <br>
+        <br>
+
+        <% perguntas.forEach( pergunta => {%>
+            <div class="card">
+                <div class="card-header">
+                    <h3> <%=pergunta.titulo%> </h3>
+                </div>
+
+                <div class="card-body">
+                    <a href="/perguntas/<%= pergunta.id %>"><button class="btn btn-success"> Responder </button></a>
+                </div>
+            </div>
+            <br>
+        <%})%>
+
+    </div>
+
+    
+</body>
+
+<%- include ('partials/footer')%>
